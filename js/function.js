@@ -370,88 +370,9 @@
 		});
 	});
 
-	/* Zoom Gallery screenshot */
-	$('.gallery-items').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		closeOnContentClick: false,
-		closeBtnInside: false,
-		mainClass: 'mfp-with-zoom',
-		image: {
-			verticalFit: true,
-		},
-		gallery: {
-			enabled: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300, // don't foget to change the duration also in CSS
-			opener: function(element) {
-			  return element.find('img');
-			}
-		}
-	});
 
-//button-gallery
-	$(document).ready(function () {
-
-    // 1. Initialize Isotope Filtering
-    var $grid = $('.filter-active').isotope({
-        itemSelector: '.filter-item',
-        layoutMode: 'fitRows',
-        percentPosition: true
-    });
-
-    // 2. Filter items on button click
-    $('.filter-menu-active').on('click', 'button', function () {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-
-        // Update active class on buttons
-        $('.filter-menu-active button').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    // 3. Initialize Magnific Popup (Lightbox)
-    $('.popup-image').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true // Allows switching between images in the popup
-        },
-        zoom: {
-            enabled: true,
-            duration: 300
-        }
-    });
-});
-
-$(document).ready(function () {
-    console.log("function.js is loaded and working!");
-
-    // 1. Initialize Isotope on the grid
-    var $grid = $('.filter-active').isotope({
-        itemSelector: '.filter-item',
-        layoutMode: 'fitRows',
-        transitionDuration: '0.6s'
-    });
-
-    // 2. Filter items on button click
-    $('.filter-menu-active').on('click', 'button', function () {
-        var filterValue = $(this).attr('data-filter');
-        
-        // Apply the filter
-        $grid.isotope({ filter: filterValue });
-
-        // Update active class for the button styling
-        $('.filter-menu-active button').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    // 3. Fix for overlapping images
-    $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-    });
-});
+    //button-gallery
+	
 
 	
 
