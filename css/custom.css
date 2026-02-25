@@ -12961,3 +12961,62 @@ header.main-header .header-sticky.active {
         max-width: 140px; /* Even smaller image for small phones */
     }
 }
+
+
+/************************************/
+/*** Hero Header Box Styles ***/
+/************************************/
+
+.header-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.header-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: bounce 2s infinite;
+}
+
+.header-box h1 {
+    margin: 0;
+    flex: 1;
+}
+
+/* Bounce animation for the emoji/icon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-box {
+        gap: 15px;
+    }
+    
+    .header-box img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .header-box img {
+        width: 60px;
+        height: 60px;
+    }
+}
