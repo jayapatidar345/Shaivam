@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description"
+        content="Shaivam Early Years: Best Montessori Play School in Kamla Nagar, Delhi. Safe environment, NEP 2020 curriculum, and holistic child development.">
+    <meta name="keywords"
+        content="Preschool Kamla Nagar, Montessori Delhi, Nursery Admission, Shaivam Early Years, Early Childhood Education">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
     <title>Shaivam - Play, Learn and Grow</title>
@@ -116,14 +118,13 @@
                 <button data-filter="*" class="active">All Zone <img class="btn-bg" src="images/btn-bg.png"
                         alt="btn-bg"><img class="btn-active-bg" src="images/btn-bg-active.png"
                         alt="btn-active-bg"></button>
-                <button data-filter=".cat-1">Work Time <img class="btn-bg" src="images/btn-bg.png"
-                        alt="btn-bg"><img class="btn-active-bg" src="images/btn-bg-active.png"
-                        alt="btn-active-bg"></button>
-                <button data-filter=".cat-2">Festival Images<img class="btn-bg" src="images/btn-bg.png" alt="btn-bg"><img
+                <button data-filter=".cat-1">Work Time <img class="btn-bg" src="images/btn-bg.png" alt="btn-bg"><img
                         class="btn-active-bg" src="images/btn-bg-active.png" alt="btn-active-bg"></button>
-                <button data-filter=".cat-3">Classroom fun <img class="btn-bg" src="images/btn-bg.png"
+                <button data-filter=".cat-2">Festival Images<img class="btn-bg" src="images/btn-bg.png"
                         alt="btn-bg"><img class="btn-active-bg" src="images/btn-bg-active.png"
                         alt="btn-active-bg"></button>
+                <button data-filter=".cat-3">Classroom fun <img class="btn-bg" src="images/btn-bg.png" alt="btn-bg"><img
+                        class="btn-active-bg" src="images/btn-bg-active.png" alt="btn-active-bg"></button>
             </div>
             <div class="row filter-active">
                 <!-- Work time (cat-1) -->
@@ -243,9 +244,12 @@
                             <ul>
                                 <li><a href="https://wa.me/918448194166" target="_blank"><i
                                             class="fa-brands fa-whatsapp"></i></a></li>
-                                <li><a href="index.html#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/share/18DCaWhWrH/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.instagram.com/shaivam.ey" target="_blank"><i
                                             class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/shaivam-early-years/" target="_blank"><i
+                                            class="fa-brands fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -257,8 +261,8 @@
                             <img src="images/logo.png" alt="Shaivam Logo">
                         </div>
                         <div class="about-footer-content">
-                            <p>Shaivam Early Years & Day Care is a learning space where children explore, play, and grow
-                                in a safe, loving, and creative environment.</p>
+                            <p>Shaivam Early Years is a Montessori-inspired learning space. where children explore,
+                                play, and grow in a safe, loving, and creative environment.</p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +281,7 @@
                         <div class="footer-links">
                             <h3>Our Programs</h3>
                             <ul>
-                                 <li><a href="programs.html">Mother-Toddler</a></li>
+                                <li><a href="programs.html">Mother-Toddler</a></li>
                                 <li><a href="programs.html">Pre-Nursery Program</a></li>
                                 <li><a href="programs.html">Nursery Program</a></li>
                             </ul>
@@ -322,10 +326,10 @@
     <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/function.js"></script>
-    
+
     <!-- Gallery Filter Script -->
     <script>
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             // 1. Initialize Isotope
             var $grid = $('.filter-active').isotope({
                 itemSelector: '.filter-item',
@@ -343,17 +347,17 @@
             });
 
             // 2. Filter Button Click Handler
-            $('.filter-menu-active').on('click', 'button', function() {
+            $('.filter-menu-active').on('click', 'button', function () {
                 var filterValue = $(this).attr('data-filter');
-                
+
                 // Remove active class from siblings and add to this
                 $(this).addClass('active').siblings().removeClass('active');
-                
+
                 // Apply filter
                 $grid.isotope({ filter: filterValue });
-                
+
                 // Re-layout after a short delay for smoothness
-                setTimeout(function() {
+                setTimeout(function () {
                     $grid.isotope('layout');
                 }, 100);
             });
@@ -376,7 +380,7 @@
                 mainClass: 'mfp-fade',
                 removalDelay: 300,
                 callbacks: {
-                    open: function() {
+                    open: function () {
                         $.magnificPopup.instance.wrap.addClass('mfp-gallery-popup');
                     }
                 }
