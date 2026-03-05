@@ -446,6 +446,18 @@ a:focus {
 	background-color: #FF5E20;
 }
 
+.bg-blue {
+	background-color: #0928a7;
+}
+
+.bg-green {
+	background-color: #04521c;
+}
+
+.bg-red {
+	background-color: #910808;
+}
+
 /* Button spacing adjustment */
 .expertise-btn {
 	margin-top: 20px;
@@ -3657,6 +3669,7 @@ header.main-header .header-sticky.active {
 .approach-item-image {
 	width: 55%;
 	align-content: end;
+
 }
 
 .approach-item-image figure {
@@ -3666,10 +3679,26 @@ header.main-header .header-sticky.active {
 }
 
 .approach-item-image img {
-	width: 100%;
-	aspect-ratio: 1 / 0.985;
-	object-fit: cover;
-	border-radius: 10px 10px 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 0.985;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    
+    /* Animation Properties */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Define the movement */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up by 10 pixels */
+    }
+    100% {
+        transform: translateY(0px);
+	}
 }
 
 .our-expertise {
@@ -3774,38 +3803,6 @@ header.main-header .header-sticky.active {
 	border-radius: 20px;
 }
 
-.play-video-circle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-}
-
-.play-video-circle a {
-	display: inline-block;
-	border-radius: 50%;
-	cursor: none;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-}
-
-.play-video-circle a img {
-	width: 100%;
-	max-width: 160px;
-	border-radius: 50%;
-	animation: infiniterotate 20s infinite linear;
-}
-
-@keyframes infiniterotate {
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-.play-video-circle a:hover img {
-	animation-play-state: paused;
-}
 
 .how-it-work {
 	padding: 100px 0;
@@ -4340,22 +4337,67 @@ header.main-header .header-sticky.active {
 }
 
 /* Ensure descriptions are spaced well */
+.page-programs .row {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 80px;
+}
+
+.page-programs .row:last-child {
+	margin-bottom: 0;
+}
+
+.page-programs .row > [class*="col-"] {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .program-detailed-content {
-	padding: 20px;
+	padding: 20px 40px;
+}
+
+.program-detailed-image {
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.program-detailed-image .image-anime {
+	max-width: 450px;
+	width: 100%;
 }
 
 .program-detailed-image .image-anime img {
 	width: 100%;
-	height: auto;
+	height: 450px;
+	object-fit: cover;
 	border-radius: 80px 30px 80px 30px;
 	border: 8px solid #ffffff;
 	transition: all 0.5s ease-in-out;
+}
+
+/* Dashed borders for each program */
+.program-detailed-image.program-1 .image-anime img {
+	border: 6px dashed #FFD700;
+	box-shadow: 0 0 0 8px #ffffff;
+}
+
+.program-detailed-image.program-2 .image-anime img {
+	border: 6px dashed #9B59B6;
+	box-shadow: 0 0 0 8px #ffffff;
+}
+
+.program-detailed-image.program-3 .image-anime img {
+	border: 6px dashed #E74C3C;
+	box-shadow: 0 0 0 8px #ffffff;
 }
 
 .two-boxx {
 	display: flex;
 	gap: 15px;
 	margin-top: 20px;
+	margin-bottom: 25px;
 }
 
 .info-box {
@@ -6244,6 +6286,16 @@ header.main-header .header-sticky.active {
 
 	.page-programs {
 		padding: 50px 0 20px;
+	}
+
+	.page-programs .row {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	.page-programs .row > [class*="col-"] {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.page-program-single {
